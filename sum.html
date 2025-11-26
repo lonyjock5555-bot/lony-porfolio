@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lony Jock – Portfolio</title>
+  <style>
+    /* Navigation */
+    nav {
+      background: #000;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav button {
+      background: yellow;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    nav button a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* General page styles */
+    body {
+      background: #0d0d0d;
+      color: #e6e6e6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about, .projects, .contact {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+    }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 18px yellow;
+      border-color: yellow;
+    }
+
+    /* Video Card */
+    .video-card video {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .video-card:hover video {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* Animation fade in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Logo Animation */
+    .logo-anim {
+      animation: spinLogo 4s infinite ease-in-out;
+    }
+
+    @keyframes spinLogo {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg) scale(1.05); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Form input styles */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #444;
+      background: #222;
+      color: #fff;
+    }
+
+    .contact-form button {
+      background: yellow;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <button><a href="#home">Home</a></button>
+    <button><a href="#about">About</a></button>
+    <button><a href="#skills">Skills</a></button>
+    <button><a href="#contact">Contact</a></button>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="home">
+    <img src="sum.jpeg" alt="Lony Jock Logo" class="logo-anim" style="width:140px;height:140px;border-radius:50%;border:4px solid yellow;">
+    <h1>Lony Jock</h1>
+    <p>Digital Marketer & 2D Animator | Sales & Outreach Team Member</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>
+      I am a youth empowerment advocate and serve as a Sales and Outreach Team Member at the Nyirol Institute of Innovation and Technology, helping build strong partnerships. I am also a Fundraising Team Member at StepUp.One, supporting impactful digital and social initiatives. Skilled in digital marketing including email marketing, social media management, content creation, blogging, lead generation, and graphic design. I also create engaging visual stories through 2D animation.
+    </p>
+  </section>
+
+  <!-- SKILLS & PROJECTS -->
+  <section id="skills" class="projects fade-in">
+    <h2>My Skills & Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <h3>Digital Marketing</h3>
+        <p>Email marketing, campaign optimization, audience targeting.</p>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Social Media Management</h3>
+        <p>Managing platforms, engagement strategies, analytics reporting.</p>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Content Creation</h3>
+        <p>Crafting impactful posts, visuals, and community storytelling.</p>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Fundraising</h3>
+        <p>Supporting donor outreach, proposal development, campaign tasks.</p>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>2D Animation</h3>
+        <p>Bringing ideas to life through smooth, clean 2D animations and explainer videos.</p>
+      </div>
+
+      <!-- Video Card -->
+      <div class="project-card video-card fade-in">
+        <h3>Animation Demo</h3>
+        <video src="2D.mp4" muted loop preload="metadata"></video>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p>Interested in connecting or supporting the mission?</p>
+
+    <form class="contact-form" onsubmit="sendForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Lony Jock – All Rights Reserved
+  </footer>
+
+  <script>
+    // Contact Form Alert
+    function sendForm(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    }
+
+    // Video Hover Autoplay
+    document.querySelectorAll('.video-card video').forEach(video => {
+      video.addEventListener('mouseenter', () => video.play());
+      video.addEventListener('mouseleave', () => video.pause());
+    });
+  </script>
+
+</body>
+</html>
